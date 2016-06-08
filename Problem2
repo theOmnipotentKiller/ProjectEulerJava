@@ -1,0 +1,25 @@
+// Problem 2. Easy. Spent 15 minutes because I didn't read even only. Lesson Learnt.
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class EasyLazy
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int a = 1, b = 2, c = 0, s = 0;
+		
+		s = 2; //The first even term
+		
+		while( c < 4000000 ) {
+			c = a + b;
+			a = b;
+			b = c;
+			if( c%2 == 0 )
+				s += c;
+		}
+		
+		System.out.println(s);
+	}
+}
